@@ -1,9 +1,19 @@
 ---
+import Social from './Social.astro';
 const platform = "github";
 const username = "leasad03";
+const socialUser = "dasa.sandoval";
 ---
 
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
 <footer>
-  <p>Learn more about my projects on <a href={`https://www.${platform}.com/${username}`}>{platform}</a>!</p>
-  <p>Follow me at: <a href="https://www.linkedin.com/in/dasael-sandoval/" target="blank">LinkedIn</a>  |  <a href="https://facebook.com/dasa.sandoval" target="blank">Facebook</a></p>
+  <Social platform="github" username={username} />
+  <Social platform="facebook" username={socialUser} />
 </footer>
